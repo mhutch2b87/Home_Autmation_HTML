@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Automation</title>
+</head>
+<body>
+    <button onClick="turnOn()">Turn Light On</button>
+    <button onclick="turnOff()">Turn Light Off!</button>
+
+
+<script>
+
+    function turnOn() {
+        const Http = new XMLHttpRequest();
+        const theUrl = 'http://localhost:3005/turnon';
+
+        Http.open("GET", theUrl);
+        Http.send();
+
+        Http.onreadystatechange = (event) => {
+            console.log("Light should be on", Http.responseText)
+        }
+
+    }
+
+    function turnOff() {
+        const Http = new XMLHttpRequest();
+        const theUrl = 'http://localhost:3005/turnoff';
+
+        Http.open("GET", theUrl);
+        Http.send();
+
+        Http.onreadystatechange = (event) => {
+            console.log("Light should be off", Http.responseText)
+        }
+    }
+</script>
+    
+</body>
+</html>
