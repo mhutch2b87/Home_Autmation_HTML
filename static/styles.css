@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    background-image:url(/static/IMG/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hue{
+    float: left;
+}
+#main{
+    width: 100%;
+}
+.On {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+    box-shadow: 0 0 30px skyblue;
+    background: linear-gradient(-45deg, blue, red);
+    color: chartreuse;
+    padding: 30px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+.Off {
+    width: 60%;
+    display: inline-block;
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+    background:black;
+    color: blanchedalmond;
+    padding: 30px;
+    margin-left: 200px;
+}
